@@ -25,3 +25,4 @@
 
 - 13:00: set up files
 - 13:30: plan components
+- 15:00: research ui libraries
