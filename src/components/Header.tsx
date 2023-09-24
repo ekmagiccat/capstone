@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactNode } from "react";
+// import { ReactNode } from "react";
 
 // interface Props {
 //   children: ReactNode;
@@ -9,7 +9,11 @@ import { ReactNode } from "react";
 // };
 
 function Header() {
-  return <div>Welcome!</div>;
+  return (
+    <div>
+      <h1 className="display-1">Welcome!</h1>
+    </div>
+  );
 }
 
 export default Header;
