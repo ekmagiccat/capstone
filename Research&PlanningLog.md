@@ -27,4 +27,4 @@
 - 13:00: set up files
 - 13:30: plan components
 - 15:00: research ui libraries
-- 16:00:
+- 20:00: continue research into other examples that use ui libraries downloaded
