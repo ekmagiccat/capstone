@@ -20,9 +20,11 @@
 ### Friday, 09/22
 
 - 9:30: follow along react tutorial
+- 11:00: wrap-up
 
 ### Sunday 09/23
 
 - 13:00: set up files
 - 13:30: plan components
 - 15:00: research ui libraries
+- 16:00:
