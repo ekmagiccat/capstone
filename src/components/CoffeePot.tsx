@@ -1,5 +1,5 @@
 import React from "react";
-import chemexImage from "./../img/chemex.jpeg";
+import chemexImage from "./../img/chemex.jpg";
 
 function CoffeePot() {
   return (
