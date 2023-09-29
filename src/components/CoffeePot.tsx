@@ -1,10 +1,10 @@
 import React from "react";
-import chemexImage from "./../img/chemex.jpg";
+
 
 function CoffeePot() {
   return (
     <>
-      <img src={chemexImage} alt="chemex pot" />
+      <img src={"./"} alt="chemex pot" />
     </>
   );
 }
