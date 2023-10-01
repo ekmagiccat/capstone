@@ -4,8 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
-function CoffeePot() {
-    return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("img", { src: "", alt: "chemex pot" })));
+function GameControl() {
+    return react_1.default.createElement("div", null);
 }
-exports.default = CoffeePot;
+exports.default = GameControl;
