@@ -1,11 +1,7 @@
 import React from "react";
 
-function CoffeePot() {
-  return (
-    <>
-      <img src={""} alt="chemex pot" />
-    </>
-  );
-}
+const CoffeePot = () => {
+  return <div>CoffeePot</div>;
+};
 
 export default CoffeePot;
