@@ -4,11 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
-const Header_1 = __importDefault(require("./Header"));
-const Instructions_1 = __importDefault(require("./Instructions"));
-const App = () => {
+const GameControl = () => {
     return (react_1.default.createElement("div", null,
-        react_1.default.createElement(Header_1.default, null),
-        react_1.default.createElement(Instructions_1.default, null)));
+        react_1.default.createElement("h2", null, "Play")));
 };
-exports.default = App;
+exports.default = GameControl;

@@ -4,8 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
-function Header() {
+const Header = () => {
     return (react_1.default.createElement("div", null,
-        react_1.default.createElement("h1", { className: "display-1" }, "Welcome!")));
-}
+        react_1.default.createElement("h1", { className: "display-1" }, "Welcome!"),
+        ";"));
+};
 exports.default = Header;
