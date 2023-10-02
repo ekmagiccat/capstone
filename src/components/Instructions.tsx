@@ -4,7 +4,7 @@ const Instructions = () => {
   return (
     <div>
       <h1 className="display-4">Instructions:</h1>
-      <p>
+      <div>
         What you need:
         <ul>
           <li>Coffee dripper</li>
@@ -49,7 +49,13 @@ const Instructions = () => {
             reaching the desired grams of water.
           </li>
         </ol>
-      </p>
+        <p>
+          Instructions courtesy of:{" "}
+          <a href="https://bluebottlecoffee.com/us/eng/brew-guides/pour-over">
+            Blue Bottle Coffee
+          </a>
+        </p>
+      </div>
     </div>
   );
 };
