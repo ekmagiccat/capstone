@@ -5,29 +5,40 @@ const GamePlay = () => {
   const [ratio, setRatio] = useState(0);
 
   const handleAddWater = () => {
-    setWaterValue(waterValue + 5);
+    const newWaterValue = waterValue + 10;
+    const waterLimit = getWaterLimit();
+    setWaterValue(Math.min(newWaterValue, waterLimit));
   };
 
-  const handleChooseRatio = () => {
-    setRatio(ratio);
-    }
+  const handleChooseRatio = (selectedRatio: number) => {
+    setRatio(selectedRatio);
 
-  const handleWaterValue = () => {
-    if (waterValue === 300)
-    return "You've reached 300!"
-  }
+    const waterLimit = getWaterLimit();
+    setWaterValue(Math.min(waterValue, waterLimit));
+  };
+
+  const getWaterLimit = () => {
+    if (ratio === 16) {
+      return 320;
+    } else if (ratio === 17) {
+      return 340;
+    } else if (ratio === 18) {
+      return 360;
+    }
+    return 0;
+  };
 
   return (
     <div>
       <h6>Choose ratio of water to coffee:</h6>
-      <p>The smaller the ratio, the stonger the cup of coffee.</p>
-      <button className="ratio1" onClick={handleChooseRatio}>
+      <p>The smaller the ratio, the stronger the cup of coffee.</p>
+      <button className="ratio1" onClick={() => handleChooseRatio(16)}>
         16:1
       </button>
-      <button className="ratio2" onClick={handleChooseRatio}>
+      <button className="ratio2" onClick={() => handleChooseRatio(17)}>
         17:1
       </button>
-      <button className="ratio3" onClick={handleChooseRatio}>
+      <button className="ratio3" onClick={() => handleChooseRatio(18)}>
         18:1
       </button>
       <p className="water">{waterValue}</p>
