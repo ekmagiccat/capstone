@@ -34,18 +34,21 @@ const GamePlay = () => {
       <p>The smaller the ratio, the stronger the cup of coffee.</p>
       <button
         className="btn btn-outline-success"
+        type="button"
         onClick={() => handleChooseRatio(16)}
       >
         16:1
       </button>
       <button
         className="btn btn-outline-success"
+        type="button"
         onClick={() => handleChooseRatio(17)}
       >
         17:1
       </button>
       <button
         className="btn btn-outline-success"
+        type="button"
         onClick={() => handleChooseRatio(18)}
       >
         18:1
