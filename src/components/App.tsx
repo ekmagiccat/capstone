@@ -5,10 +5,8 @@ import GamePlay from "./GamePlay";
 import { useState } from "react";
 
 const App = () => {
- 
-
   return (
-    <div>
+    <div className="app">
       <Header />
       <Instructions />
       <GamePlay />
