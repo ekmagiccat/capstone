@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const GamePlay = () => {
   const [waterValue, setWaterValue] = useState(0);
   const [ratio, setRatio] = useState(0);
+
+  useEffect(() => {
+    setWaterValue(0);
+  }, [ratio]);
 
   const handleAddWater = () => {
     const newWaterValue = waterValue + 10;
