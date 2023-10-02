@@ -23,3 +23,10 @@ button:focus {
   transform: translateY(3px);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
 }
+
+.collapse {
+  &:not(.show) {
+    display: none;
+  }
+}
+

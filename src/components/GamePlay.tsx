@@ -36,27 +36,29 @@ const GamePlay = () => {
     <div>
       <h6>Choose ratio of water to coffee:</h6>
       <p>The smaller the ratio, the stronger the cup of coffee.</p>
-      <button
-        className="btn btn-outline-success"
-        type="button"
-        onClick={() => handleChooseRatio(16)}
-      >
-        16:1
-      </button>
-      <button
-        className="btn btn-outline-success"
-        type="button"
-        onClick={() => handleChooseRatio(17)}
-      >
-        17:1
-      </button>
-      <button
-        className="btn btn-outline-success"
-        type="button"
-        onClick={() => handleChooseRatio(18)}
-      >
-        18:1
-      </button>
+      <div className="nav-bar">
+        <button
+          className="btn btn-outline-success"
+          type="button"
+          onClick={() => handleChooseRatio(16)}
+        >
+          16:1
+        </button>
+        <button
+          className="btn btn-outline-success"
+          type="button"
+          onClick={() => handleChooseRatio(17)}
+        >
+          17:1
+        </button>
+        <button
+          className="btn btn-outline-success"
+          type="button"
+          onClick={() => handleChooseRatio(18)}
+        >
+          18:1
+        </button>
+      </div>
       <p className="water">{waterValue}</p>
       <button
         className="btn btn-outline-success"

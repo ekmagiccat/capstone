@@ -11,6 +11,10 @@ The application will be an instructional guide that teaches a user how to make p
 
 - Git
 - Markdown
+- React
+- Bootstrap
+- Material UI
+- 
 
 ## **Setup/Installation Requirements**
 
