@@ -1,9 +1,8 @@
 import React from "react";
-import chemex from "../images/chemex.png";
 import waterPour from "../images/waterPour.png";
 import { motion } from "framer-motion";
 
-const CoffeePot = () => {
+const Kettle = () => {
   const [rotate, setRotate] = React.useState(false);
 
   return (
@@ -14,10 +13,9 @@ const CoffeePot = () => {
         setRotate(!rotate);
       }}
     >
-      <img src={waterPour} alt="kettle pouring water" />
-      <img src={chemex} alt="pour over coffee" className="chemex" />
+      <img src={waterPour} alt="kettle pouring water" id="kettle" />
     </motion.div>
   );
 };
 
-export default CoffeePot;
+export default Kettle;

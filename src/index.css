@@ -37,3 +37,7 @@ button:focus {
 .chemex {
   width: 200px;
 }
+
+#kettle {
+  width: auto;
+}
