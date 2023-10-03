@@ -14,7 +14,7 @@ The application will be an instructional guide that teaches a user how to make p
 - React
 - Bootstrap
 - Material UI
-- 
+- Framer-Motion
 
 ## **Setup/Installation Requirements**
 
@@ -22,7 +22,7 @@ Initial Setup
 
 - Clone this repository to your local machine.
   ```bash
-  $ git clone https://github.com/ekmagiccat/capstone-proposal
+  $ git clone https://github.com/ekmagiccat/capstone
   ```
 - Open VS Code (or your IDE of choice).
 - Open the top level directory you just cloned.
