@@ -8,7 +8,7 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 const Header = () => {
   return (
     <div>
-      <h1 className="display-1">Welcome!</h1>
+      <h1 className="display-1">It's Coffee Time!</h1>
       <br />
     </div>
   );

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import waterPour from "../images/waterPour.png";
 
 const GamePlay = () => {
   const [waterValue, setWaterValue] = useState(0);
   const [ratio, setRatio] = useState(0);
+  const [rotate, setRotate] = useState(false);
 
   useEffect(() => {
     setWaterValue(0);
@@ -19,6 +22,15 @@ const GamePlay = () => {
 
     const waterLimit = getWaterLimit();
     setWaterValue(Math.min(waterValue, waterLimit));
+  };
+
+  const handleKettleRotate = () => {
+    setRotate(!rotate);
+  };
+
+  const handlePourButtonClick = () => {
+    handleAddWater();
+    handleKettleRotate();
   };
 
   const getWaterLimit = () => {
@@ -60,13 +72,17 @@ const GamePlay = () => {
         </button>
       </div>
       <p className="water">{waterValue}</p>
-      <button
-        className="btn btn-outline-dark"
-        type="button"
-        onClick={handleAddWater}
-      >
-        Add Water
+      
+      <button onClick={handlePourButtonClick}>
+        {rotate ? "Stop Pouring" : "Start Pouring"}
       </button>
+      <motion.div
+        animate={{ rotate: rotate ? -10 : 10 }}
+        transition={{ type: "tween", duration: 1 }}
+        onClick={handlePourButtonClick}
+      >
+        <img src={waterPour} alt="kettle pouring water" id="kettle" />
+      </motion.div>
     </div>
   );
 };
