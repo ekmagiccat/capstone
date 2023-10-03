@@ -38,21 +38,21 @@ const GamePlay = () => {
       <p>The smaller the ratio, the stronger the cup of coffee.</p>
       <div className="nav-bar">
         <button
-          className="btn btn-outline-success"
+          className="btn btn-outline-dark"
           type="button"
           onClick={() => handleChooseRatio(16)}
         >
           16:1
         </button>
         <button
-          className="btn btn-outline-success"
+          className="btn btn-outline-dark"
           type="button"
           onClick={() => handleChooseRatio(17)}
         >
           17:1
         </button>
         <button
-          className="btn btn-outline-success"
+          className="btn btn-outline-dark"
           type="button"
           onClick={() => handleChooseRatio(18)}
         >
@@ -61,7 +61,7 @@ const GamePlay = () => {
       </div>
       <p className="water">{waterValue}</p>
       <button
-        className="btn btn-outline-success"
+        className="btn btn-outline-dark"
         type="button"
         onClick={handleAddWater}
       >

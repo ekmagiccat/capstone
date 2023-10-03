@@ -1,5 +1,15 @@
 .app {
-  background-color: #fff8de;
+  background: linear-gradient(
+    to bottom right,
+    #7c9d96,
+    #a1ccd1,
+    #f4f2de,
+    #e9b384
+  );
+  font-family: sans-serif;
+  margin-bottom: 60px;
+  padding: 0;
+  background-attachment: fixed;
 }
 
 button {
@@ -16,7 +26,7 @@ button {
 
 button:hover,
 button:focus {
-  background-color: #c1d0b5;
+  background-color: #a1ccd1;
   border: 1px solid black;
   font-style: bold;
   color: black;
