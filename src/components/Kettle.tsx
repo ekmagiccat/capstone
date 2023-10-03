@@ -7,7 +7,7 @@ const Kettle = () => {
 
   return (
     <motion.div
-      animate={{ rotate: rotate ? 360 : 20 }}
+      animate={{ rotate: rotate ? -10 : 10 }}
       transition={{ type: "tween", duration: 1 }}
       onClick={() => {
         setRotate(!rotate);
