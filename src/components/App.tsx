@@ -9,10 +9,10 @@ const App = () => {
   return (
     <div className="app">
       <Header />
+      <GamePlay />
       <Kettle />
       <PourOver />
       <Instructions />
-      <GamePlay />
     </div>
   );
 };
