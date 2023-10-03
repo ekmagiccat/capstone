@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import waterPour from "../images/waterPour.png";
+import chemex from "../images/chemex.png";
 
 const GamePlay = () => {
   const [waterValue, setWaterValue] = useState(0);
@@ -12,9 +13,12 @@ const GamePlay = () => {
   }, [ratio]);
 
   const handleAddWater = () => {
-    const newWaterValue = waterValue + 10;
     const waterLimit = getWaterLimit();
-    setWaterValue(Math.min(newWaterValue, waterLimit));
+
+    if (waterValue < waterLimit) {
+      const newWaterValue = waterValue + 20;
+      setWaterValue(Math.min(newWaterValue, waterLimit));
+    }
   };
 
   const handleChooseRatio = (selectedRatio: number) => {
@@ -72,7 +76,7 @@ const GamePlay = () => {
         </button>
       </div>
       <p className="water">{waterValue}</p>
-      
+
       <button onClick={handlePourButtonClick}>
         {rotate ? "Stop Pouring" : "Start Pouring"}
       </button>
@@ -83,6 +87,7 @@ const GamePlay = () => {
       >
         <img src={waterPour} alt="kettle pouring water" id="kettle" />
       </motion.div>
+      <img src={chemex} alt="pour over coffee" id="chemex" />
     </div>
   );
 };
