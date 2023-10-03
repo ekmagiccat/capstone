@@ -83,7 +83,7 @@ const Instructions = () => {
                   Allow 45-65 seconds to elapse.
                 </li>
                 <li>
-                  Continue pouring water in a circular motion unti the mixture
+                  Continue pouring water in a circular motion until the mixture
                   of water and coffee from the second pour drops to the bottom
                   of the filter, coming close to the level of the grounds. Then,
                   pour until reaching the desired grams of water.
