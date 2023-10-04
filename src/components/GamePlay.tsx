@@ -55,7 +55,7 @@ const GamePlay = () => {
       <div className="container text-center">
         <div className="row align-items-start">
           <div className="col">
-            <h6>Choose ratio of water to coffee:</h6>
+            <h3>Choose ratio of water to coffee:</h3>
             <p>The smaller the ratio, the stronger the cup of coffee.</p>
             <div>
               <button
@@ -99,6 +99,7 @@ const GamePlay = () => {
               <img src={waterPour} alt="kettle pouring water" id="kettle" />
             </motion.div>
             <img src={chemex} alt="pour over coffee" id="chemex" />
+            <div className="circle overlay"></div>
             <br />
           </div>
         </div>
