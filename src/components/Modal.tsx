@@ -3,7 +3,7 @@ import Background from "./Background";
 import { motion } from "framer-motion";
 
 interface ModalProps {
-  handleClose?: () => void;
+  handleClose: () => void;
   text: string;
 }
 const dropIn = {
@@ -38,7 +38,15 @@ const Modal: React.FC<ModalProps> = ({ handleClose, text }) => {
         animate="visible"
         exit="exit"
       >
-        Modal
+        <p>{text}</p>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            handleClose();
+          }}
+        >
+          Close
+        </button>
       </motion.div>
     </Background>
   );

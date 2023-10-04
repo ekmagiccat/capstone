@@ -18,6 +18,7 @@ const App = () => {
       <Header />
       <GamePlay />
       <Instructions />
+      <Modal text="Try again" />
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
