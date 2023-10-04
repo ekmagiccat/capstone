@@ -60,21 +60,19 @@ button:focus {
   justify-content: baseline;
 }
 
-.circle {
-  height: 60px;
-  width: 60px;
-  background-color: #6a3c00dc;
-  border-radius: 50%;
-  position: absolute;
+.image-container {
+  position: relative;
+  width: 300px;
 }
 
-.circlOverlay {
+.circleOverlay {
   position: absolute;
-  top: 80px;
-  right: 15px;
-  font-weight: bold;
-  text-align: right;
-  font-size: 30px;
+  width: 20px;
+  height: 20px;
+  background-color: #6a3c00dc;
+  border-radius: 50%;
+  top: 450px;
+  left: 145px;
 }
 
 .header {
@@ -139,4 +137,3 @@ button:focus {
   flex-direction: column;
   align-items: center;
 } */
-

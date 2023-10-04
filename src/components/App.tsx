@@ -13,7 +13,6 @@ const App = () => {
 
   return (
     <div className="app">
-      <Modal />
       <Header />
       <GamePlay />
       <Instructions />

@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { motion } from "framer-motion";
 import chemex from "../images/chemex.png";
 
 const PourOver = () => {

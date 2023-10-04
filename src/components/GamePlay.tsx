@@ -98,8 +98,10 @@ const GamePlay = () => {
             >
               <img src={waterPour} alt="kettle pouring water" id="kettle" />
             </motion.div>
-            <img src={chemex} alt="pour over coffee" id="chemex" />
-            <div className="circle circleOverlay"></div>
+            <div className="image-container">
+              <div className="circle circleOverlay"></div>
+              <img src={chemex} alt="pour over coffee" id="chemex" />
+            </div>
             <br />
           </div>
         </div>
