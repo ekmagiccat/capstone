@@ -9,7 +9,7 @@ const Instructions = () => {
   return (
     <div className="instructions">
       <div style={{}}>
-        <Accordion style={{ width: 500 }}>
+        <Accordion style={{ width: 600 }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -38,7 +38,7 @@ const Instructions = () => {
       </div>
 
       <div style={{}}>
-        <Accordion style={{ width: 500 }}>
+        <Accordion style={{ width: 600 }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
