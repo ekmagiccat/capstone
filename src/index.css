@@ -68,7 +68,7 @@ button:focus {
   position: absolute;
 }
 
-.overlay {
+.circlOverlay {
   position: absolute;
   top: 80px;
   right: 15px;
@@ -116,7 +116,7 @@ button:focus {
   display: flex;
   font-size: 30px;
 }
-
+/* 
 .background {
   position: fixed;
   top: 0;
@@ -138,4 +138,5 @@ button:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
+
