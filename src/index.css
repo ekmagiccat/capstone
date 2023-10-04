@@ -7,8 +7,13 @@
     #e9b384
   );
   font-family: sans-serif;
-  padding: 0;
   background-attachment: fixed;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 button {
@@ -34,6 +39,7 @@ button:focus {
 }
 
 #chemex {
+  display: flex;
   width: 350px;
   margin-right: 200px;
 }
@@ -43,23 +49,14 @@ button:focus {
 }
 
 .instructions {
-  /* display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
-  font-weight: 600;
-  margin-top: 50px;
-  */
   border: 3px solid black;
   border-radius: 15px;
   padding: 40px;
   width: 60%;
   height: 30%;
   padding-top: 40px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  margin-top: 40px;
+  display: inline-block;
   justify-content: center;
 }
 
@@ -96,12 +93,26 @@ button:focus {
 .game {
   display: inline-block;
   margin-top: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   padding-left: 50px;
   padding-right: 50px;
   font-weight: 600;
   margin-top: 50px;
   border: 3px solid black;
   border-radius: 15px;
+}
+
+.water {
+  background-color: #e9b384;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  width: 0.75in;
+  height: 0.55in;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  font-size: 32px;
 }

@@ -59,31 +59,32 @@ const GamePlay = () => {
             <p>The smaller the ratio, the stronger the cup of coffee.</p>
             <div>
               <button
-                className="btn btn-outline-dark"
+                className="btn btn-outline-dark btn-lg"
                 type="button"
                 onClick={() => handleChooseRatio(16)}
               >
                 16:1
               </button>
               <button
-                className="btn btn-outline-dark"
+                className="btn btn-outline-dark btn-lg"
                 type="button"
                 onClick={() => handleChooseRatio(17)}
               >
                 17:1
               </button>
               <button
-                className="btn btn-outline-dark"
+                className="btn btn-outline-dark btn-lg"
                 type="button"
                 onClick={() => handleChooseRatio(18)}
               >
                 18:1
               </button>
             </div>
+            <br />
             <p className="water">{waterValue}</p>
-
+            <br />
             <button
-              className="btn btn-outline-dark"
+              className="btn btn-outline-dark btn-lg"
               type="button"
               onClick={handlePourButtonClick}
             >
@@ -98,6 +99,7 @@ const GamePlay = () => {
               <img src={waterPour} alt="kettle pouring water" id="kettle" />
             </motion.div>
             <img src={chemex} alt="pour over coffee" id="chemex" />
+            <br />
           </div>
         </div>
       </div>
