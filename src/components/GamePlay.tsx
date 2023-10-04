@@ -12,12 +12,24 @@ const GamePlay = () => {
     setWaterValue(0);
   }, [ratio]);
 
+  // const handleAddWater = () => {
+  //   const waterLimit = getWaterLimit();
+
+  //   if (waterValue < waterLimit) {
+  //     const newWaterValue = waterValue + 20;
+  //     setWaterValue(Math.min(newWaterValue, waterLimit));
+  //   }
+  // };
   const handleAddWater = () => {
     const waterLimit = getWaterLimit();
+    const newWaterValue = waterValue + 20;
 
-    if (waterValue < waterLimit) {
-      const newWaterValue = waterValue + 20;
-      setWaterValue(Math.min(newWaterValue, waterLimit));
+    if (newWaterValue <= waterLimit) {
+      // If the new value is within or equal to the limit, update waterValue
+      setWaterValue(newWaterValue);
+    } else {
+      // If the new value exceeds the limit, display a message
+      alert("You've reached the needed water amount!"); // You can use a more user-friendly message or UI element
     }
   };
 
@@ -49,13 +61,13 @@ const GamePlay = () => {
   };
 
   return (
-    <div>
+    <div className="game">
       <div className="container text-center">
         <div className="row align-items-start">
           <div className="col">
             <h6>Choose ratio of water to coffee:</h6>
             <p>The smaller the ratio, the stronger the cup of coffee.</p>
-            <div className="nav-bar">
+            <div>
               <button
                 className="btn btn-outline-dark"
                 type="button"
@@ -80,15 +92,18 @@ const GamePlay = () => {
             </div>
             <p className="water">{waterValue}</p>
 
-            <button onClick={handlePourButtonClick}>
-              {rotate ? "Stop Pouring" : "Start Pouring"}
+            <button
+              className="btn btn-outline-dark"
+              type="button"
+              onClick={handlePourButtonClick}
+            >
+              Add Water
             </button>
           </div>
           <div className="col">
             <motion.div
               animate={{ rotate: rotate ? -10 : 10 }}
               transition={{ type: "tween", duration: 0.5 }}
-              // onClick={handlePourButtonClick}
             >
               <img src={waterPour} alt="kettle pouring water" id="kettle" />
             </motion.div>

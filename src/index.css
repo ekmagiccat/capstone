@@ -47,8 +47,6 @@ button:focus {
   width: auto;
   height: auto;
   margin: 0 auto;
-  margin-top: 20px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -59,4 +57,14 @@ button:focus {
   width: 60px;
   background-color: #6a3c00dc;
   border-radius: 50%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 80px;
+  right: 15px;
+  font-weight: bold;
+  text-align: right;
+  font-size: 30px;
 }

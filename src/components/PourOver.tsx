@@ -8,10 +8,8 @@ const PourOver = () => {
 
   return (
     <div>
-      <div className="circle"></div>
-      <motion.div>
-        <img src={chemex} alt="pour over coffee" id="chemex" />
-      </motion.div>
+      <img src={chemex} alt="pour over coffee" id="chemex" />
+      <div className="circle overlay">circle</div>
     </div>
   );
 };
