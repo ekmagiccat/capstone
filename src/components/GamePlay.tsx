@@ -12,24 +12,14 @@ const GamePlay = () => {
     setWaterValue(0);
   }, [ratio]);
 
-  // const handleAddWater = () => {
-  //   const waterLimit = getWaterLimit();
-
-  //   if (waterValue < waterLimit) {
-  //     const newWaterValue = waterValue + 20;
-  //     setWaterValue(Math.min(newWaterValue, waterLimit));
-  //   }
-  // };
   const handleAddWater = () => {
     const waterLimit = getWaterLimit();
     const newWaterValue = waterValue + 20;
 
     if (newWaterValue <= waterLimit) {
-      // If the new value is within or equal to the limit, update waterValue
       setWaterValue(newWaterValue);
     } else {
-      // If the new value exceeds the limit, display a message
-      alert("You've reached the needed water amount!"); // You can use a more user-friendly message or UI element
+      alert("You've reached the needed water amount!");
     }
   };
 
