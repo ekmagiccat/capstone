@@ -10,7 +10,7 @@ const MugPopUp = () => {
         src={mug}
         alt="yellow coffee mug that says 'business'"
         data-bs-toggle="modal"
-        className="w-25 h-35"
+        className="mugImage"
         data-bs-target="#coffeeMug"
       />
       <div

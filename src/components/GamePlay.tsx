@@ -64,57 +64,66 @@ const GamePlay = () => {
 
   return (
     <div className="game">
-      <div className="container text-center">
-        <div className="row align-items-start">
+      <div className="container px-4 text-center">
+        <div className="row gx-5">
           <div className="col">
-            <h3>Choose ratio of water to coffee:</h3>
-            <p>The smaller the ratio, the stronger the cup of coffee.</p>
-            <div>
+            <div className="p-3">
+              <h3>Choose ratio of water to coffee:</h3>
+              <h4>The smaller the ratio, the stronger the cup of coffee.</h4>
+              <div>
+                <button
+                  className="btn btn-dark btn-lg ratioBtn"
+                  type="button"
+                  onClick={() => handleChooseRatio(16)}
+                >
+                  16:1
+                </button>
+                <button
+                  className="btn btn-dark btn-lg ratioBtn"
+                  type="button"
+                  onClick={() => handleChooseRatio(17)}
+                >
+                  17:1
+                </button>
+
+                <button
+                  className="btn btn-dark btn-lg ratioBtn"
+                  type="button"
+                  onClick={() => handleChooseRatio(18)}
+                >
+                  18:1
+                </button>
+              </div>
+              <br />
+              <p className="water">{waterValue}</p>
+              <br />
               <button
-                className="btn btn-outline-dark btn-lg"
+                className="btn btn-dark btn-lg"
                 type="button"
-                onClick={() => handleChooseRatio(16)}
+                onClick={handlePourButtonClick}
               >
-                16:1
+                Add Water
               </button>
-              <button
-                className="btn btn-outline-dark btn-lg"
-                type="button"
-                onClick={() => handleChooseRatio(17)}
-              >
-                17:1
-              </button>
-              <button
-                className="btn btn-outline-dark btn-lg"
-                type="button"
-                onClick={() => handleChooseRatio(18)}
-              >
-                18:1
-              </button>
+              <div className="col">
+                <div className="p-3">
+                  <motion.div
+                    animate={{ rotate: rotate ? -10 : 10 }}
+                    transition={{ type: "tween", duration: 0.5 }}
+                  >
+                    <img
+                      src={waterPour}
+                      alt="kettle pouring water"
+                      id="kettle"
+                    />
+                  </motion.div>
+                  <div className="image-container">
+                    <div className="circleOverlay" id="circle"></div>
+                    <img src={chemex} alt="pour over coffee" id="chemex" />
+                  </div>
+                </div>
+                <br />
+              </div>
             </div>
-            <br />
-            <p className="water">{waterValue}</p>
-            <br />
-            <button
-              className="btn btn-outline-dark btn-lg"
-              type="button"
-              onClick={handlePourButtonClick}
-            >
-              Add Water
-            </button>
-          </div>
-          <div className="col">
-            <motion.div
-              animate={{ rotate: rotate ? -10 : 10 }}
-              transition={{ type: "tween", duration: 0.5 }}
-            >
-              <img src={waterPour} alt="kettle pouring water" id="kettle" />
-            </motion.div>
-            <div className="image-container">
-              <div className="circleOverlay" id="circle"></div>
-              <img src={chemex} alt="pour over coffee" id="chemex" />
-            </div>
-            <br />
           </div>
         </div>
       </div>
