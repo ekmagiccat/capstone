@@ -8,6 +8,7 @@ const GamePlay = () => {
   const [waterValue, setWaterValue] = useState(0);
   const [ratio, setRatio] = useState(0);
   const [rotate, setRotate] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     setWaterValue(0);
@@ -20,8 +21,12 @@ const GamePlay = () => {
     if (newWaterValue <= waterLimit) {
       setWaterValue(newWaterValue);
     } else {
-      alert("You've reached the needed water amount!");
+      setShowModal(true);
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   const handleChooseRatio = (selectedRatio: number) => {
@@ -65,14 +70,11 @@ const GamePlay = () => {
 
   return (
     <div className="game">
-      <div>
-        <MugPopUp />
-      </div>
       <div className="container px-4 text-center">
         <div className="row gx-5">
           <div className="col">
             <div className="p-3">
-              <h3>Choose ratio of water to coffee:</h3>
+              <h3 className="display-6">Choose ratio of water to coffee:</h3>
               <h4>The smaller the ratio, the stronger the cup of coffee.</h4>
               <div>
                 <button
@@ -99,8 +101,8 @@ const GamePlay = () => {
                 </button>
               </div>
               <br />
-              <p className="water">{waterValue}</p>
-              <br />
+              <p className="water">{waterValue}g water</p>
+              <p>to 20g coffee grounds</p>
               <button
                 className="btn btn-dark btn-lg"
                 type="button"
@@ -123,6 +125,14 @@ const GamePlay = () => {
                 </div>
               </div>
               <br />
+              <div>
+                {showModal && (
+                  <MugPopUp
+                    imgUrl="../images/coffeeMug.png"
+                    onClose={handleCloseModal}
+                  />
+                )}
+              </div>
             </div>
           </div>
         </div>

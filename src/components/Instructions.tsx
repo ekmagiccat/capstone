@@ -8,8 +8,11 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 const Instructions = () => {
   return (
     <div className="instructions">
+      <h2 className="display-6 instructTitle">
+        How To Make A Perfect Pour-Over Coffee
+      </h2>
       <div style={{}}>
-        <Accordion style={{ width: 600 }}>
+        <Accordion style={{ width: 550 }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -38,7 +41,7 @@ const Instructions = () => {
       </div>
 
       <div style={{}}>
-        <Accordion style={{ width: 600 }}>
+        <Accordion style={{ width: 550 }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
