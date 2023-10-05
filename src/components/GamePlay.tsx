@@ -2,13 +2,11 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import waterPour from "../images/waterPour.png";
 import chemex from "../images/chemex.png";
-import MugPopUp from "./MugPopUp";
 
 const GamePlay = () => {
   const [waterValue, setWaterValue] = useState(0);
   const [ratio, setRatio] = useState(0);
   const [rotate, setRotate] = useState(false);
-  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     setWaterValue(0);
@@ -21,12 +19,8 @@ const GamePlay = () => {
     if (newWaterValue <= waterLimit) {
       setWaterValue(newWaterValue);
     } else {
-      setShowModal(true);
+      alert("You've reached the needed water amount!");
     }
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
   };
 
   const handleChooseRatio = (selectedRatio: number) => {
@@ -44,10 +38,10 @@ const GamePlay = () => {
     const circle = document.getElementById("circle");
 
     if (circle) {
-      circle.style.width = "142px";
-      circle.style.height = "142px";
-      circle.style.top = "230px";
-      circle.style.left = "42px";
+      circle.style.width = "135px";
+      circle.style.height = "135px";
+      circle.style.top = "220px";
+      circle.style.left = "100px";
     }
   };
 
@@ -74,7 +68,7 @@ const GamePlay = () => {
         <div className="row gx-5">
           <div className="col">
             <div className="p-3">
-              <h3 className="display-6">Choose ratio of water to coffee:</h3>
+              <h3 className="display-6">Choose a ratio of water to coffee:</h3>
               <h4>The smaller the ratio, the stronger the cup of coffee.</h4>
               <div>
                 <button
@@ -125,14 +119,6 @@ const GamePlay = () => {
                 </div>
               </div>
               <br />
-              <div>
-                {showModal && (
-                  <MugPopUp
-                    imgUrl="../images/coffeeMug.png"
-                    onClose={handleCloseModal}
-                  />
-                )}
-              </div>
             </div>
           </div>
         </div>

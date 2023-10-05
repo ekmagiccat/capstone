@@ -1,23 +1,47 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { motion } from "framer-motion";
+import { useState } from "react";
 import mug from "../images/coffeeMug.png";
 
 interface MugPopUpProps {
-  onClose?: () => void;
-  imgUrl: string;
+  setOpenModal: boolean;
 }
 
-const MugPopUp: React.FC<MugPopUpProps> = ({ imgUrl, onClose }) => {
+const MugPopUp: React.FC<MugPopUpProps> = ({ setOpenModal }) => {
   return (
-    <motion.div className="modal">
-      <div className="modal-content">
-        <img src={imgUrl} alt="coffee mug" />
-        <button onClick={onClose}>Close</button>
+    <div className="modalBackground">
+      <div className="modalContainer">
+        <div className="titleCloseBtn">
+          <button
+            onClick={() => {
+              setOpenModal(false);
+            }}
+          >
+            X
+          </button>
+        </div>
+        <div className="title">
+          <h1>Are You Sure You Want to Continue?</h1>
+        </div>
+        <div className="body">
+          <p>The next page looks amazing. Hope you want to go there!</p>
+        </div>
+        <div className="footer">
+          <button
+            onClick={() => {
+              setOpenModal(false);
+            }}
+            id="cancelBtn"
+          >
+            Cancel
+          </button>
+          <button>Continue</button>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
+
 //   return (
 //     <div>
 //       <img
