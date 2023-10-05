@@ -1,5 +1,6 @@
 import React from "react";
 import { useSpring, animated } from "@react-spring/web";
+import Instructions from "./Instructions";
 
 const Header = () => {
   const props = useSpring({
@@ -11,6 +12,7 @@ const Header = () => {
       <animated.div style={props} className="display-1 header">
         It's Coffee Time!
       </animated.div>
+      <Instructions />
     </div>
   );
 };

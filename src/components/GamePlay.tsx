@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import waterPour from "../images/waterPour.png";
 import chemex from "../images/chemex.png";
+import MugPopUp from "./MugPopUp";
 
 const GamePlay = () => {
   const [waterValue, setWaterValue] = useState(0);
@@ -38,10 +39,10 @@ const GamePlay = () => {
     const circle = document.getElementById("circle");
 
     if (circle) {
-      circle.style.width = "175px";
-      circle.style.height = "175px";
-      circle.style.top = "345px";
-      circle.style.left = "70px";
+      circle.style.width = "142px";
+      circle.style.height = "142px";
+      circle.style.top = "230px";
+      circle.style.left = "42px";
     }
   };
 
@@ -64,6 +65,9 @@ const GamePlay = () => {
 
   return (
     <div className="game">
+      <div>
+        <MugPopUp />
+      </div>
       <div className="container px-4 text-center">
         <div className="row gx-5">
           <div className="col">
@@ -104,25 +108,21 @@ const GamePlay = () => {
               >
                 Add Water
               </button>
-              <div className="col">
-                <div className="p-3">
-                  <motion.div
-                    animate={{ rotate: rotate ? -10 : 10 }}
-                    transition={{ type: "tween", duration: 0.5 }}
-                  >
-                    <img
-                      src={waterPour}
-                      alt="kettle pouring water"
-                      id="kettle"
-                    />
-                  </motion.div>
-                  <div className="image-container">
-                    <div className="circleOverlay" id="circle"></div>
-                    <img src={chemex} alt="pour over coffee" id="chemex" />
-                  </div>
+            </div>
+            <div className="col">
+              <div className="p-3">
+                <motion.div
+                  animate={{ rotate: rotate ? -10 : 10 }}
+                  transition={{ type: "tween", duration: 0.5 }}
+                >
+                  <img src={waterPour} alt="kettle pouring water" id="kettle" />
+                </motion.div>
+                <div className="image-container">
+                  <div className="circleOverlay" id="circle"></div>
+                  <img src={chemex} alt="pour over coffee" id="chemex" />
                 </div>
-                <br />
               </div>
+              <br />
             </div>
           </div>
         </div>
