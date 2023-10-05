@@ -54,7 +54,10 @@ const Instructions = () => {
                 <ol>
                   <li>Bring at least 400 grams (14 oz) of water to a boil.</li>
                   <li>Grind coffee to a coarseness resembling sea salt. </li>
-                  <li>Place a filter in the dripper</li>
+                  <li>
+                    Place a filter in the dripper,wet with hot water, then pour
+                    excess water out.
+                  </li>
                   <li>
                     Add the ground coffee to the filter and gently tap it to
                     level the surface of the grounds.

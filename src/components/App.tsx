@@ -16,6 +16,7 @@ const App = () => {
     <div className="app">
       <Header />
       <GamePlay />
+      <br />
       <div className="modalButton">
         <motion.button
           whileHover={{ scale: 1.1 }}

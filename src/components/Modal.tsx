@@ -40,10 +40,14 @@ const Modal: React.FC<ModalProps> = ({ handleClose }) => {
         animate="visible"
         exit="exit"
       >
-        <button className="btn btn-dark btn-lg" onClick={handleClose}>
+        <button
+          className="btn btn-outline-light btn-lg"
+          id="close"
+          onClick={handleClose}
+        >
           Close
         </button>
-        <div id="cofeeMug">
+        <div className="mugModal">
           <img src={mug} alt="coffee mug" />
         </div>
       </motion.div>

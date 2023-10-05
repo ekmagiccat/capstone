@@ -10,9 +10,9 @@ const Header = () => {
   return (
     <div>
       <animated.div style={props} className="display-1 header">
-        It's Coffee Time!
+        <strong>It's Coffee Time!</strong>
       </animated.div>
-      
+
       <br />
       <Instructions />
     </div>
