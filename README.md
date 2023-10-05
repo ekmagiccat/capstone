@@ -15,6 +15,7 @@ The application will be an instructional guide that teaches a user how to make p
 - Bootstrap
 - Material UI
 - Framer-Motion
+- Spring
 
 ## **Setup/Installation Requirements**
 
