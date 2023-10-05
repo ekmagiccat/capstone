@@ -7,9 +7,21 @@ const GamePlay = () => {
   const [waterValue, setWaterValue] = useState(0);
   const [ratio, setRatio] = useState(0);
   const [rotate, setRotate] = useState(false);
+  const [circleStyle, setCircleStyle] = useState({
+    width: "20px",
+    height: "20px",
+    top: "300px",
+    left: "160px",
+  });
 
   useEffect(() => {
     setWaterValue(0);
+    setCircleStyle({
+      width: "20px",
+      height: "20px",
+      top: "300px",
+      left: "160px",
+    });
   }, [ratio]);
 
   const handleAddWater = () => {
@@ -34,21 +46,15 @@ const GamePlay = () => {
     setRotate(!rotate);
   };
 
-  const handleGrowCircle = () => {
-    const circle = document.getElementById("circle");
-
-    if (circle) {
-      circle.style.width = "135px";
-      circle.style.height = "135px";
-      circle.style.top = "220px";
-      circle.style.left = "100px";
-    }
-  };
-
   const handlePourButtonClick = () => {
     handleAddWater();
     handleKettleRotate();
-    handleGrowCircle();
+    setCircleStyle({
+      width: "135px",
+      height: "135px",
+      top: "220px",
+      left: "100px",
+    });
   };
 
   const getWaterLimit = () => {
@@ -115,7 +121,11 @@ const GamePlay = () => {
                   <img src={waterPour} alt="kettle pouring water" id="kettle" />
                 </motion.div>
                 <div className="image-container">
-                  <div className="circleOverlay" id="circle"></div>
+                  <div
+                    className="circleOverlay"
+                    style={circleStyle}
+                    id="circle"
+                  ></div>
                   <img src={chemex} alt="pour over coffee" id="chemex" />
                 </div>
               </div>
