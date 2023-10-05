@@ -12,6 +12,8 @@ const Header = () => {
       <animated.div style={props} className="display-1 header">
         It's Coffee Time!
       </animated.div>
+
+      <br />
       <Instructions />
     </div>
   );

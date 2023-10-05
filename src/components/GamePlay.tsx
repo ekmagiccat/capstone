@@ -96,7 +96,8 @@ const GamePlay = () => {
               </div>
               <br />
               <p className="water">{waterValue}g water</p>
-              <p>to 20g coffee grounds</p>
+              <div className="smallText">to 20g coffee grounds</div>
+              <br />
               <button
                 className="btn btn-dark btn-lg"
                 type="button"

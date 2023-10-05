@@ -1,24 +1,21 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
-import mug from "../images/coffeeMug.png";
 
 interface MugPopUpProps {
-  setOpenModal: boolean;
+  setOpenModal: (isOpen: boolean) => void;
 }
 
 const MugPopUp: React.FC<MugPopUpProps> = ({ setOpenModal }) => {
+  const handleCloseModal = () => {
+    console.log("Closing modal");
+    setOpenModal(false);
+  };
+
   return (
     <div className="modalBackground">
       <div className="modalContainer">
         <div className="titleCloseBtn">
-          <button
-            onClick={() => {
-              setOpenModal(false);
-            }}
-          >
-            X
-          </button>
+          <button onClick={handleCloseModal}>X</button>
         </div>
         <div className="title">
           <h1>Are You Sure You Want to Continue?</h1>

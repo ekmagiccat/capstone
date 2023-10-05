@@ -7,17 +7,17 @@ import { useState } from "react";
 const App = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
+  const handleOpenModal = () => {
+    console.log("Opening modal");
+    setModalOpen(true);
+  };
+
   return (
     <div className="app">
       <Header />
       <GamePlay />
       <h6>Get your coffee here</h6>
-      <button
-        className="openModalBtn"
-        onClick={() => {
-          setModalOpen(true);
-        }}
-      >
+      <button className="openModalBtn" onClick={handleOpenModal}>
         Open
       </button>
 
