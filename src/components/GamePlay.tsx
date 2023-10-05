@@ -31,7 +31,7 @@ const GamePlay = () => {
     if (newWaterValue <= waterLimit) {
       setWaterValue(newWaterValue);
     } else {
-      alert("You've reached the needed water amount!");
+      alert("You've reached the necessary water amount!");
     }
   };
 

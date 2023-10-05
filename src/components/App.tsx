@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./Header";
 import GamePlay from "./GamePlay";
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "./Modal";

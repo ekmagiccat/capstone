@@ -1,4 +1,4 @@
-# Capstone Proposal
+# Capstone
 
 ### By Eva Kemp
 
@@ -15,7 +15,7 @@ The application will be an instructional guide that teaches a user how to make p
 - Bootstrap
 - Material UI
 - Framer-Motion
-- Spring
+- React Spring
 
 ## **Setup/Installation Requirements**
 
