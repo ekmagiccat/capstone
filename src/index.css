@@ -90,6 +90,7 @@ button:focus {
 }
 
 .header {
+  background-color: #a1ccd1c4;
   display: inline-flex;
   text-align: center;
   justify-content: center;
@@ -143,7 +144,7 @@ button:focus {
   left: 0;
   height: 100%;
   width: 100%;
-  background: #000000e1;
+  background: #35271be0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,7 +152,7 @@ button:focus {
 }
 
 .modal {
-  width: clamp(50%, 700px, 90%);
+  width: clamp(50%, 600px, 90%);
   height: min(50%, 300px);
 
   margin: auto;
@@ -162,3 +163,12 @@ button:focus {
   align-items: center;
 }
 
+#coffeeMug {
+  max-width: 50%;
+  justify-content: center;
+}
+
+.modalButton {
+  text-align: right;
+  justify-content: right;
+}

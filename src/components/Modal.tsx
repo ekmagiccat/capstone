@@ -34,17 +34,18 @@ const Modal: React.FC<ModalProps> = ({ handleClose }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="modal orange-gradient"
+        className="modal"
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
-        <p>Open</p>
         <button className="btn btn-dark btn-lg" onClick={handleClose}>
           Close
         </button>
-        <img src={mug} alt="coffee mug" className="cofeeMug" />
+        <div id="cofeeMug">
+          <img src={mug} alt="coffee mug" />
+        </div>
       </motion.div>
     </Backdrop>
   );
