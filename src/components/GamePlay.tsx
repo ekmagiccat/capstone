@@ -34,9 +34,22 @@ const GamePlay = () => {
     setRotate(!rotate);
   };
 
+  const handleGrowCircle = () => {
+    const circle = document.getElementById("circle");
+
+    if (circle) {
+      // Increase the circle's size
+      circle.style.width = "175px";
+      circle.style.height = "175px";
+      circle.style.top = "345px"; // Adjust the position as needed
+      circle.style.left = "70px"; // Adjust the position as needed
+    }
+  };
+
   const handlePourButtonClick = () => {
     handleAddWater();
     handleKettleRotate();
+    handleGrowCircle();
   };
 
   const getWaterLimit = () => {
@@ -99,7 +112,7 @@ const GamePlay = () => {
               <img src={waterPour} alt="kettle pouring water" id="kettle" />
             </motion.div>
             <div className="image-container">
-              <div className="circle circleOverlay"></div>
+              <div className="circleOverlay" id="circle"></div>
               <img src={chemex} alt="pour over coffee" id="chemex" />
             </div>
             <br />
