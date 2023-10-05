@@ -38,11 +38,10 @@ const GamePlay = () => {
     const circle = document.getElementById("circle");
 
     if (circle) {
-      // Increase the circle's size
       circle.style.width = "175px";
       circle.style.height = "175px";
-      circle.style.top = "345px"; // Adjust the position as needed
-      circle.style.left = "70px"; // Adjust the position as needed
+      circle.style.top = "345px";
+      circle.style.left = "70px";
     }
   };
 

@@ -73,7 +73,7 @@ button:focus {
   border-radius: 50%;
   top: 450px;
   left: 145px;
-  transition: all 0.3s ease;
+  transition: all 8s ease;
 }
 
 .header {
@@ -115,26 +115,3 @@ button:focus {
   display: flex;
   font-size: 30px;
 }
-/* 
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #6a3c00e1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal {
-  width: clamp(50%, 700px, 90%);
-  height: min(50%, 300px);
-  margin: auto;
-  padding: 0 2rem;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
